@@ -1,0 +1,252 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TUBUH HALAMAN */
+body {
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* KONTAINER */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* SECTION */
+section {
+  padding: 60px 0;
+  transition: all 0.5s ease;
+}
+
+/* WARNA TAMPILAN */
+#about { background-color: #e0f2fe; }
+#services { background-color: #f0fdf4; }
+#pricing { background-color: #fef9c3; }
+#gallery { background-color: #fce7f3; }
+#testimonials { background-color: #e0f2fe; }
+#contact { background-color: #f1f5f9; }
+
+/* HEADINGS */
+h2 {
+  color: #0f172a;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+/*GAYA */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 0 auto 20px auto;
+  max-width: 750px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+/* TABLE */
+.card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  table-layout: fixed;
+}
+
+.card th, .card td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.card th {
+  background-color: #bae6fd;
+  color: #0c4a6e;
+}
+
+/* GALLERI */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: calc(33.333% - 20px);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* TESTIMONI */
+.card blockquote {
+  font-style: italic;
+  background: #dbeafe;
+  padding: 20px;
+  border-left: 5px solid #3b82f6;
+  border-radius: 6px;
+  margin: 0;
+}
+
+/* KONTAK */
+#contact .contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  width: 280px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0f172a;
+  color: #f8fafc;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+}
+
+/* LAYANAN */
+.layanan-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.layanan-card {
+  width: 240px;
+  padding: 20px;
+  border-radius: 16px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.layanan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.layanan-kiloan { background-color: #38bdf8; }
+.layanan-satuan { background-color: #34d399; }
+.layanan-dryclean { background-color: #fbbf24; color: #333; }
+.layanan-antarjemput { background-color: #a78bfa; }
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+
+  .layanan-card {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    padding: 30px 10px;
+  }
+}
